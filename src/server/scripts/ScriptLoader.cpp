@@ -17,6 +17,7 @@
 
 #include "ScriptLoader.h"
 #include <Custom\World_Chat\World_Chat.cpp>
+#include <Custom\LoginChat.cpp>
 
 //bg
 void AddSC_battleground_seething_shore();
@@ -2599,6 +2600,7 @@ void AddBattlegroundScripts()
 void AddCustomScripts()
 {
 //#ifdef SCRIPTS
+    AddLoginChatScripts();
     AddSC_World_Chat();
     AddSC_CustomStartups();
 //#endif

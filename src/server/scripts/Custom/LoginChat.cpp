@@ -9,6 +9,7 @@
 #include "Chat.h"
 #include "DatabaseEnv.h"
 #include "Util.h"
+#include "Log.h"
 
 
 class LoginChat : public PlayerScript{
@@ -30,12 +31,12 @@ public:
     	//	    cMgr->LoadChannels();
 	    //}
 
-
+        
 
         //新人提示 -- peipei
         Player* players = player->GetSession()->GetPlayer();
 
-        TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "RRRRRRRR %s", players->GetTeamId());
+        TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "222RRRRRRRR %s", players->GetTeamId());
 
 
         if (players)
