@@ -170,7 +170,7 @@ public:
                         if (player->isGameMaster())// Game Master have the blizz icon in place of faction
                         {
                             TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "999999 %s", msg);
-                            snprintf(message, 1024, "[World][%s][%s%s|r]: %s%s|r", world_chat_GMIcon.c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetSession()->GetPlayerName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                            snprintf(message, 1024, "[World][%s%s|r]: %s%s|r", world_chat_GMIcon.c_str(),  player->GetSession()->GetPlayerName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                         }
                         else
                         {
