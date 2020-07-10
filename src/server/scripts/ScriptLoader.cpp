@@ -18,6 +18,7 @@
 #include "ScriptLoader.h"
 
 //新加自定义脚本 --LIU
+void AddSC_item_upgrade_npc();     //升级装备 新
 void AddSC_LoginChatScripts();     
 void AddSC_JionChatScripts();      //新人加入欢迎公告信息
 
@@ -2602,6 +2603,7 @@ void AddBattlegroundScripts()
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
+    AddSC_item_upgrade_npc();
     AddSC_JionChatScripts();
     AddSC_LoginChatScripts();
     AddSC_CustomStartups();
