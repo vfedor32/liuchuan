@@ -69,41 +69,6 @@ public:
                 team = UnicodeToUtf8(L"|cffCC0000熊猫人中立|r");
 
 
-            switch (players->getRace()) {
-            case RACE_HUMAN:
-                plrrace = UnicodeToUtf8(L"人类");
-                break;
-            case RACE_ORC:
-                plrrace = UnicodeToUtf8(L"兽人");
-                break;
-            case RACE_DWARF:
-                plrrace = UnicodeToUtf8(L"矮人");
-                break;
-            case RACE_NIGHTELF:
-                plrrace = UnicodeToUtf8(L"暗夜精灵");
-                break;
-            case RACE_UNDEAD_PLAYER:
-                plrrace = UnicodeToUtf8(L"亡灵");
-                break;
-            case RACE_TAUREN:
-                plrrace = UnicodeToUtf8(L"牛头人");
-                break;
-            case RACE_GNOME:
-                plrrace = UnicodeToUtf8(L"侏儒");
-                break;
-            case RACE_TROLL:
-                plrrace = UnicodeToUtf8(L"巨魔");
-                break;
-            case RACE_BLOODELF:
-                plrrace = UnicodeToUtf8(L"血精灵");
-                break;
-            case RACE_DRAENEI:
-                plrrace = UnicodeToUtf8(L"德莱尼"); 
-                break;
-            case RACE_GOBLIN:
-                plrrace = UnicodeToUtf8(L"熊猫人"); 
-                    break;
-            }
             switch (players->getClass()) {
             case CLASS_MAGE:
                 plrclass = UnicodeToUtf8(L"|cff40C7EB法师|r");
