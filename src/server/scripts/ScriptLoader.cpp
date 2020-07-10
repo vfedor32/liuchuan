@@ -19,7 +19,7 @@
 
 //新加自定义脚本 --LIU
 void AddSC_LoginChatScripts();     
-void AddSC_JionChatScripts();      //新人加入欢迎公告信息
+void AddSC_JoinChatScripts();      //新人加入欢迎公告信息
 
 
 //bg
@@ -2602,7 +2602,7 @@ void AddBattlegroundScripts()
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
-    AddSC_JionChatScripts();
+    AddSC_JoinChatScripts();
     AddSC_LoginChatScripts();
     AddSC_CustomStartups();
 #endif

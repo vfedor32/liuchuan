@@ -42,34 +42,8 @@ public:
         Player* players = player->GetSession()->GetPlayer();
         
 
-        TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "RRRRRRRR1 %s", players->GetTeamId());
+       
 
-        //发送系统公告信息
-        SessionMap sessions = sWorld->GetAllSessions();
-        for (SessionMap::iterator itr = sessions.begin(); itr != sessions.end(); ++itr) {
-
-            TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "aaaaaaaa1 %s", players->GetTeamId());
-
-            //如果是相同阵营
-            //if (Player* plr = itr->second->GetPlayer()) {
-
-     
-                    TC_LOG_INFO(LOG_FILTER_SERVER_LOADING, "aaaaaa2 %s",player->GetTeam());
-
-                    std::string announce;
-                    std::string name = players->GetName();
-
-                    announce = "player '";
-                    announce += name.c_str();
-                    announce += "'join server ";
-
-                    char message[2048];
-                    sprintf(message, player->GetSession()->GetTrinityString(LANG_SYSTEMMESSAGE), announce.c_str());
-
-                    sWorld->SendServerMessage(SERVER_MSG_STRING, message, players);
-
-            //}
-        }
 
         
         if (players)
@@ -109,6 +83,9 @@ public:
             //    break;
             //case RACE_DRAENEI:
             //    plrrace = UnicodeToUtf8(L"德莱尼");
+            //    break;
+            //case RACE_GOBLIN:
+            //    plrrace = UnicodeToUtf8(L"熊猫人");
             //    break;
             //}
             //switch (players->getClass()) {
@@ -150,6 +127,47 @@ public:
 
             //sWorld->SendGlobalText(pAnnounce, 0);
             //players->IsFirstJoin = false;
+
+
+
+
+
+
+
+
+
+
+                    //发送系统公告信息
+            SessionMap sessions = sWorld->GetAllSessions();
+            for (SessionMap::iterator itr = sessions.begin(); itr != sessions.end(); ++itr) {
+
+
+                //如果是相同阵营
+                //if (Player* plr = itr->second->GetPlayer()) {
+
+
+
+                std::string announce;
+                std::string name = players->GetName();
+
+                announce = "player '";
+                announce += name.c_str();
+                announce += "'join server ";
+
+                char message[2048];
+                sprintf(message, player->GetSession()->GetTrinityString(LANG_SYSTEMMESSAGE), announce.c_str());
+
+                sWorld->SendServerMessage(SERVER_MSG_STRING, message, players);
+
+                //}
+            }
+
+
+
+
+
+
+
         }
         //////////////////////////////////////////////////////////////////////////
 
